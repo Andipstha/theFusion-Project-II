@@ -1,10 +1,59 @@
 #include<iostream>
 #include<stdio.h>
 #include<stdlib.h>
+#include<time.h>
 #include<fstream>
 #include<string.h>
 #include<conio.h>
 using namespace std;
+
+void printMessageCenter(const char* message)
+{
+	int len = 0;
+	int pos = 0;
+	
+	len = (78 - strlen(message))/2;
+	printf("\t\t\t");
+	for(pos=0;pos<len;pos++)
+	{
+		printf(" ");
+	}
+	printf("%s",message);
+}
+void headMessage(const char *message)
+{
+	system("cls");
+	time_t currentTime;
+	time(&currentTime);
+	printf("\t\t\t%s\n", ctime(&currentTime));
+	printf("\t\t\t\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb");
+    printf("\n\t\t\t\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb                                                   \xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb");
+    printf("\n\t\t\t\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb   	  LIBRARY MANAGEMENT SYSTEM Project in C++     \xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb");
+    printf("\n\t\t\t\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb                                                   \xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb");
+    printf("\n\t\t\t\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb");
+    printf("\n\t\t\t---------------------------------------------------------------------------\n");
+    printMessageCenter(message);
+    printf("\n\t\t\t---------------------------------------------------------------------------");
+}
+void welcomeMessage()
+{
+	system("color 90");
+    headMessage("KIST COLLEGE");
+    printf("\n\n\n\n\n");
+    printf("\n\t\t\t\t  **-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**\n");
+    printf("\n\t\t\t\t        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+    printf("\n\t\t\t\t        =                 WELCOME                   =");
+    printf("\n\t\t\t\t        =                   TO                      =");
+    printf("\n\t\t\t\t        =                LIBRARY                    =");
+    printf("\n\t\t\t\t        =               MANAGEMENT                  =");
+    printf("\n\t\t\t\t        =                 SYSTEM                    =");
+    printf("\n\t\t\t\t        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+    printf("\n\t\t\t\t  **-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**\n");
+    printf("\n\n\n\t\t\t Press any key to continue.....");
+    getch();
+}
+
+
 class Lib
 {
    public:
@@ -717,6 +766,8 @@ void Lib::get()
 void Lib::student()
 {
     int i;
+    	
+		headMessage("MAIN MENU");
         cout<<"\n\t************ WELCOME STUDENT ************\n";
         cout<<"\n\t\t>>Please Choose One Option:\n";
         cout<<"\n\t\t1.View BookList\n\n\t\t2.Search for a Book\n\n\t\t3.Go to main menu\n\n\t\t4.Close Application\n";
@@ -908,6 +959,8 @@ void Lib::password()
 }
 int main()
 {
+	welcomeMessage();
+	system("cls");
     Lib obj;
     obj.get();
     getch();
