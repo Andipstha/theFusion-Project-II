@@ -337,7 +337,7 @@ void Lib::show(int i)
   {
       int i;
       cout<<"\n\t\t>>Please Choose one Branch :-\n";
-      cout<<"\n\t\t1.IT DEPARTMENT\n\n\t\t2.EDUCATION DEPARTMENT\n\n\t\t3.CRIMINOLOGY DEPARTMENT\n\n\t\t4.BA DEPARTMENT\n\n\t\t5.ENGENEERING DEPARTMENT\n\n\t\t6.COMSCI\n\n\t\t7.Go to menu\n";
+      cout<<"\n\t\t1.BIT DEPARTMENT\n\n\t\t2.BIM DEPARTMENT\n\n\t\t3.BBA DEPARTMENT\n\n\t\t4.BBS DEPARTMENT\n\n\t\t5.Go to menu\n";
       cout<<"\n\t\tEnter youur choice : ";
       cin>>i;
       switch(i)
@@ -350,11 +350,13 @@ void Lib::show(int i)
                   break;
           case 4: return 4;
                   break;
-          case 5: return 5;
+          /*
+		  case 5: return 5;
                   break;
           case 6: return 6;
                   break;
-          case 7: system("cls");
+          */
+		  case 5: system("cls");
                   if(x==1)
                   student();
                   else
