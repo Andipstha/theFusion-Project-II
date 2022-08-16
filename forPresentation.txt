@@ -1,0 +1,13 @@
+Objective:
+
+To provide a Library Management System for a School library, this would provide all library functions.
+
+Rational:
+To improve library management and reduce paperwork.
+
+Scope of Project.
+To make the existing system more efficient
+To provide auser frendly enviroonment where user can be serviced better.
+To make functioning of library faster.
+Provide a system where the library staff can get to know about the defaulters and take actions.
+
